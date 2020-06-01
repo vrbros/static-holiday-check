@@ -24,7 +24,7 @@ Here are the high level steps involved:
   * Set the runtime as Python 3.8 or above
   * Assign the role that has basic Lambda execution permissions
   * Copy the code provided in this example as Lambda body and save
-* Add this new Lambda function to your Amazon Connect instance from the properties
+* Add [this](lambda_function.py) new Lambda function to your Amazon Connect instance from the properties
 * Invoke the Lambda from your contact flow
 
 ## Functioning
