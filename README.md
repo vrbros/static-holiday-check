@@ -33,13 +33,13 @@ After creating the Lambda and adding the same in the properties of the Connect i
 
 * Invoke the Lambda function:
 
+<p style="text-align: center;">
 ![Invoking Lambda Function](InvokeLambda1.png)
 
-![Invoking Lambda Function](InvokeLambda2.png){:height="50%" width="50%"}
+![Invoking Lambda Function](InvokeLambda2.png)
+</p>
 
 * Then using the Check Contact Attributes, read the response whether it's a holiday or not. This sample Lambda function returns two values that can be used within the Contact Flow - IsHoliday and holidayName.
-
-<p style="text-align: center;">Centered text</p>
 
 ## The Code
 Inject the following code into your custom webpage that embeds CCP.
