@@ -37,12 +37,19 @@ After creating the Lambda and adding the same in the properties of the Connect i
 
 ----
 
-<img align="centre" src="InvokeLambda2.png" width="600" height="650">
+<img src="InvokeLambda2.png" width="600" height="650">
+
+* Then using the Check Contact Attributes, branch out based on the response from Lambda whether it's a holiday or not. This sample Lambda function returns two values that can be used within the Contact Flow - `IsHoliday` and `holidayName`.
+
+* If today's date is a holiday, the value of `IsHoliday` will be 'yes' else it will be 'no'
+
+<img src="CheckAttribute.png" width="600" height="650">
+
+* The second value `holidayName` contains the name of the holiday, such as, 'Christmas Day'. You can use this value within the play blocks by adding `$.External.holidayName` within the text you want to play.
+
+![Play Holiday Name](HolidayName.png)
 
 
-* Then using the Check Contact Attributes, read the response whether it's a holiday or not. This sample Lambda function returns two values that can be used within the Contact Flow - IsHoliday and holidayName.
-
-![Checking Response](CheckAttribute.png)
 
 ## The Code
 Inject the following code into your custom webpage that embeds CCP.
