@@ -56,7 +56,6 @@ After creating the Lambda and adding the same in the properties of the Connect i
 The Lambda code has a static list of holidays that needs to be updated atleast once a year by the administrator. It is stored a variable within the Python code.
 
 ```python
-
 holidayList = {
     "25/12/2020": "Christmas Day",
     "01/01/2020": "New Year Day",
