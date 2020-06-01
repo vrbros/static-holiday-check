@@ -35,7 +35,7 @@ After creating the Lambda and adding the same in the properties of the Connect i
 
 ![Invoking Lambda Function](InvokeLambda1.png)
 
-<img align="centre" src="InvokeLambda2.png" width="450" height="550">
+<img align="centre" src="InvokeLambda2.png" width="600" height="650">
 
 ![Invoking Lambda Function](InvokeLambda2.png)
 
