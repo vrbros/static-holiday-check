@@ -33,7 +33,7 @@ After creating the Lambda and adding the same in the properties of the Connect i
 
 * Invoke the Lambda function:
 
-<p style="text-align: center;">
+<p style="text-align: center;"><img src="InvokeLambda1.png"></p>
 ![Invoking Lambda Function](InvokeLambda1.png)
 
 ![Invoking Lambda Function](InvokeLambda2.png)
