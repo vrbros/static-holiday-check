@@ -43,7 +43,7 @@ After creating the Lambda and adding the same in the properties of the Connect i
 
 * If today's date is a holiday, the value of `IsHoliday` will be 'yes' else it will be 'no'
 
-<img src="CheckAttribute.png" width="600" height="650">
+![Check Attribute](CheckAttribute.png)
 
 * The second value `holidayName` contains the name of the holiday, such as, 'Christmas Day'. You can use this value within the play blocks by adding `$.External.holidayName` within the text you want to play.
 
@@ -51,28 +51,28 @@ After creating the Lambda and adding the same in the properties of the Connect i
 
 
 
-## The Code
-Inject the following code into your custom webpage that embeds CCP.
+## Lambda Code
 
-```javascript
+The Lambda code has a static list of holidays that needs to be updated atleast once a year by the administrator. It is stored a variable within the Python code.
 
-function handleAgentRefresh(agent) {
-  var config = agent.getConfiguration();
-  var x = config.softphoneEnabled;
-  if (x === false) {
-    config.extension = "";
-    config.softphoneEnabled = true;
-    agent.setConfiguration(config, {
-      success: function() {browserNotify("You are not authorised to change to Deskphone. Softphone enabled again");},
-      failure: function(err) {browserNotify("You are not authorised to change to Deskphone. Please revert back to the Softphone again");}
-    });
-  }
-};
+```python
+
+holidayList = {
+    "25/12/2020": "Christmas Day",
+    "01/01/2020": "New Year Day",
+    "27/01/2020": "Australia Day",
+    "10/04/2020": "Good Friday",
+    "01/06/2020": "Awesome Day"
+}
 
 ```
-for the complete code, please refer to code.js file in this repo.
+Make sure you update the list in exact same manner as shown in the example above.
+
+For the complete code for the Lambda function, please refer to [this](lambda_function.py) file in this repo.
 
 ## Conclusion
-The deskphone setting can be restricted by adding simple javasccript code into a custom CCP instance. This also avoids any server side setup such as API gateways, or Lambda functions. However, if your use case requires a more secure server side restriction of this setting, there is a solution available via Amazon Connect API.
+
+For a simple holiday check, we can use the serverless Lambda functions to store and validate holidays for our contact flows. With very basic system administration, the list of holidays can be updated.
+
 
 > Work Hard, Have fun and Make History!
