@@ -17,7 +17,7 @@ This example does exactly this. It helps you create a Lambda function that allow
 
 This Lambda function is written in Python and requires some basic understanding of the AWS console.
 
-## Steps
+## Steps to implement
 
 Here are the high level steps involved:
 * Create a new Lambda function within your AWS account
