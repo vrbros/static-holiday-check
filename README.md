@@ -34,6 +34,7 @@ After creating the Lambda and adding the same in the properties of the Connect i
 * Invoke the Lambda function:
 
 <center>
+
 ![Invoking Lambda Function](InvokeLambda1.png)
 ----
 
