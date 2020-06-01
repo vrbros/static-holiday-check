@@ -35,7 +35,7 @@ After creating the Lambda and adding the same in the properties of the Connect i
 
 ![Invoking Lambda Function](InvokeLambda1.png)
 
-![Invoking Lambda Function](InvokeLambda2.png)
+![Invoking Lambda Function](InvokeLambda2.png){:height="50%" width="50%"}
 
 * Then using the Check Contact Attributes, read the response whether it's a holiday or not. This sample Lambda function returns two values that can be used within the Contact Flow - IsHoliday and holidayName.
 
