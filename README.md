@@ -27,13 +27,19 @@ Here are the high level steps involved:
 * Add [this](lambda_function.py) new Lambda function to your Amazon Connect instance from the properties
 * Invoke the Lambda from your contact flow
 
-## Functioning
-As soon as the agent tries to save an external deskphone number, an `agent.onRefresh` event is triggered and captured by the code that reverts the settings done and also notifies the agent.
+## Contact Flow
 
-![Agent Settings Screen on CCP](AgentSetting.png)
+After creating the Lambda and adding the same in the properties of the Connect instance, we can use the same from within the contact flows at appropriate part of the flow.
 
-![Agent Notification on Browser Screen](AgentNotification.png)
+* Invoke the Lambda function:
 
+![Invoking Lambda Function](InvokeLambda1.png)
+
+![Invoking Lambda Function](InvokeLambda2.png)
+
+* Then using the Check Contact Attributes, read the response whether it's a holiday or not. This sample Lambda function returns two values that can be used within the Contact Flow - IsHoliday and holidayName.
+
+<p style="text-align: center;">Centered text</p>
 
 ## The Code
 Inject the following code into your custom webpage that embeds CCP.
